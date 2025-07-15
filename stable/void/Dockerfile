@@ -27,7 +27,7 @@ RUN set -xe \
     # Skip extraction of `/etc/hosts` file (it is read-only)
     && echo noextract=/etc/hosts >> /etc/xbps.d/noextract.conf \
     # Update the package index.
-    && xbps-install -Suy \
+    && xbps-install -Sy \
     # Install dependencies for downloading files.
     && xbps-install -Ay $fetchDeps \
     # Download and verify Rustup installer.
